@@ -2,8 +2,9 @@ import React from 'react';
 import Header from '../../Shared/Header/Header';
 import './Home.css';
 import showcaseBg from '../../../images/home-showcase-bg.svg';
-import Showcase from '../../Showcase/Showcase';
 import Footer from '../../Shared/Footer/Footer';
+import Showcase from '../Showcase/Showcase';
+import LimitedService from '../LimitedService/LimitedService';
 
 const Home = () => {
 
@@ -16,12 +17,13 @@ const Home = () => {
 
     return (
         <div>
-            <div style={homeBg}>
+            <div style={homeBg} className='mb-5'>
                 <div className="container">
                     <Header></Header>
                     <Showcase></Showcase>
                 </div>
             </div>
+            <LimitedService></LimitedService>
             <Footer></Footer>
         </div>
     );
