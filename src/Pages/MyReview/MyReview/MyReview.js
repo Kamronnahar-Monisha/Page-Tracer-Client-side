@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
 import MyReviewCard from '../MyReviewCard/MyReviewCard';
 import './MyReview.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const MyReview = () => {
     const { user } = useContext(AuthContext);
@@ -20,7 +22,16 @@ const MyReview = () => {
                 if (data.deletedCount > 0) {
                     const newReviewList = myReviews.filter(review => review._id !== id);
                     setMyReviews(newReviewList);
-                    alert("Deleted Successfully");
+                    toast.info('Deleted Successfully', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        });
                 }
             });
     }
@@ -51,6 +62,7 @@ const MyReview = () => {
                         </div>
                     </div>
             }
+            <ToastContainer />
         </>
     );
 };

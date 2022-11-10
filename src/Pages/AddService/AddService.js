@@ -30,7 +30,7 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('Service added Sucessfully');
+                    alert('Service added Successfully');
                     navigate(`/services/${data.insertedId}`);
                 }
             });
