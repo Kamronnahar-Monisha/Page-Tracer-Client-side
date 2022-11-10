@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import AddReview from "../Pages/AddReview/AddReview";
 import AddService from "../Pages/AddService/AddService";
 import Blog from "../Pages/Blog/Blog";
+import EditReview from "../Pages/EditReview/EditReview";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyReview from "../Pages/MyReview/MyReview/MyReview";
@@ -61,6 +62,13 @@ export const router = createBrowserRouter([
             {
                 path: "/add-service",
                 element:<PrivateRoute><AddService></AddService></PrivateRoute>,
+            },
+            {
+                path: "/edit-review/:id",
+                element:<PrivateRoute><EditReview></EditReview></PrivateRoute>,
+                loader:async({params})=>{
+                    return fetch(`http://localhost:5000/orders/${params.id}`);
+                }
             },
             {
                 path: '/blog',
