@@ -18,7 +18,14 @@ const LimitedService = () => {
             <hr className='custom-hr mt-2' />
             <div className="row justify-content-between my-5">
                 {
-                    services.map(service => <Service key={service._id} service={service}></Service>)
+                    services.length ?
+                        services.map(service => <Service key={service._id} service={service}></Service>)
+                        :
+                        <div className='d-flex justify-content-center'>
+                            <div className="spinner-border text-dark" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
                 }
             </div>
             <div className='text-center mb-3'>
