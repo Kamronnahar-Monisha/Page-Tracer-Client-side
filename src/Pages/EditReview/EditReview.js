@@ -50,7 +50,7 @@ const EditReview = () => {
                             <div className="col-lg-10">
                                 <textarea className="form-control" id="floatingTextarea2" name="editedReview" defaultValue={review.reviewText}></textarea>
                             </div>
-                            <div className="col-lg-2">
+                            <div className="col-lg-2 text-center text-lg-start">
                                 <button type='submit' className='register-logout-button rounded my-2'>Edit</button>
                             </div>
                         </div>

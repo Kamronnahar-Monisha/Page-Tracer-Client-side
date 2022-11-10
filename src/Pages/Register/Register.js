@@ -59,7 +59,7 @@ const Register = () => {
             <Helmet>
                 <title>Register</title>
             </Helmet>
-            <div className="row justify-content-around align-items-center pb-5 pt-4">
+            <div className="row justify-content-around align-items-center pb-5 pt-4 gy-5">
                 <div className="col-lg-5">
                     <img src={registerImg} alt="A girl log in a website" className='w-100' />
                 </div>

@@ -7,7 +7,7 @@ const Showcase = () => {
     return (
         <div className='container'>
             <div className="row justify-content-between align-items-center">
-                <div className="col-lg-6 text-white">
+                <div className="col-lg-6 text-white order-2 order-lg-1 text-center text-lg-start">
                     <p className="fs-4 m-0 p-0">Personalize Your Reading Experience...</p>
                     <h1 className="fw-bolder"><span className='theme-color-gray heading-highlight'>BookMark</span> The</h1>
                     <h1 className="fw-bolder">Journey Of <span className='theme-color-gray heading-highlight'>Your Reading</span></h1>
@@ -16,7 +16,7 @@ const Showcase = () => {
                     </p>
                     <Link to="/services" className='btn-custom rounded'>Get Started</Link>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 order-1 order-lg-2">
                     <img src={showcaseImg} alt="girl marking page" className='w-100' />
                 </div>
             </div>

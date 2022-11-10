@@ -17,7 +17,7 @@ const Services = () => {
             </Helmet>
             <h3 className='theme-color-gray text-center'>Choose Your Desirable Bookmarks</h3>
             <hr className='custom-hr mt-2' />
-            <div className="row my-5 g-5">
+            <div className="row my-lg-5 mt-3 g-5">
                 {
                     services.length ?
                         services.map(service => <Service key={service._id} service={service}></Service>)

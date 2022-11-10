@@ -11,14 +11,14 @@ const Service = ({ service }) => {
                 <PhotoView src={service.img}>
                     <img src={service.img} alt="bookmark" className='w-100 rounded-top' />
                 </PhotoView>
-                <div className='p-4'>
+                <div className='p-4 text-center text-lg-start'>
                     <p className='theme-color-turquoise fs-5 mb-0'>{service.name}</p>
-                    <div className="row justify-content-between">
-                        <p className='col-lg-6'>
+                    <div className="row justify-content-lg-between justify-content-center">
+                        <p className='col-lg-6 col-3'>
                             <FaStar className='text-warning me-2'></FaStar>
                             {service.rating}
                         </p>
-                        <p className='col-lg-6 text-end'>${service.price}</p>
+                        <p className='col-lg-6 col-3 text-lg-end'>${service.price}</p>
                     </div>
                     <p>
                         {service.description.substr(0, 100) + "... "}

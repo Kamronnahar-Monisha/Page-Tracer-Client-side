@@ -16,7 +16,7 @@ const LimitedService = () => {
         <div className='container mb-5 py-5'>
             <h3 className='theme-color-gray text-center'>Most Popular Bookmarks</h3>
             <hr className='custom-hr mt-2' />
-            <div className="row justify-content-between my-5">
+            <div className="row justify-content-between my-lg-5 my-2 gy-5">
                 {
                     services.length ?
                         services.map(service => <Service key={service._id} service={service}></Service>)
@@ -28,7 +28,7 @@ const LimitedService = () => {
                         </div>
                 }
             </div>
-            <div className='text-center mb-3'>
+            <div className='text-center mb-3 mt-5 mt-lg-0'>
                 <Link to='/services'>
                     <button className='btn btn-warning text-white fs-5'>Explore More BookMarks</button>
                 </Link>

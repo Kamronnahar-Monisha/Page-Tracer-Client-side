@@ -20,9 +20,9 @@ const MyReviewCard = ({ review, handleDeleteButton }) => {
                         <img src={service?.img} className="w-100 rounded" alt="" />
                     </PhotoView>
                 </div>
-                <div className="col-lg-8">
+                <div className="col-lg-8 text-center text-lg-start">
                     <h4 className='theme-color-turquoise'>{service?.name}</h4>
-                    <p className='theme-color-gray'>
+                    <p className='theme-color-gray text-justify text-lg-start'>
                         {service?.description?.substr(0, 300) + "..."}
                         <Link to={`/services/${service._id}`} className='text-warning text-decoration-none'>Read more</Link>
                     </p>
@@ -32,11 +32,11 @@ const MyReviewCard = ({ review, handleDeleteButton }) => {
                             <HiChatBubbleLeftEllipsis className='fs-2 ms-2'></HiChatBubbleLeftEllipsis>
                         </p>
                         <p className='theme-color-gray'>{review.reviewText}</p>
-                        <div className='text-end'>
+                        <div className='text-lg-end text-center'>
                             <Link to={`/edit-review/${review._id}`}>
                                 <button className='review-edit-btn rounded'>Edit</button>
                             </Link>
-                            <button onClick={() => handleDeleteButton(review._id)} className='review-delete-btn rounded ms-2'>Delete</button>
+                            <button onClick={() => handleDeleteButton(review._id)} className='review-delete-btn rounded ms-2 mt-3 mt-lg-0'>Delete</button>
                         </div>
                     </div>
                 </div>
