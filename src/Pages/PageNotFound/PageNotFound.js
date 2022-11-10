@@ -13,7 +13,7 @@ const PageNotFound = () => {
             </Helmet>
             <div className='row justify-content-center align-items-center'>
                 <div className="col-lg-5 text-center">
-                    <img src={pageNotFoundImg} alt="page not found" />
+                    <img src={pageNotFoundImg} alt="page not found" className='w-100'/>
                     <Link className='btn-custom rounded' to='/'>
                         <FaArrowLeft className='me-2' />
                         Back to Home
