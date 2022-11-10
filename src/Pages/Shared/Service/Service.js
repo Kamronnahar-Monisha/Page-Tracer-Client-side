@@ -19,11 +19,11 @@ const Service = ({ service }) => {
                     </div>
                     <p>
                         {service.description.substr(0, 100) + "... "}
-                        <Link to='/' className='text-warning text-decoration-none'>Read more</Link>
+                        <Link to={`/services/${service._id}`} className='text-warning text-decoration-none'>Read more</Link>
                     </p>
                     <div className='text-center mb-3'>
-                        <Link to='/'>
-                            <button className='register-logout-button rounded'>Add To Cart</button>
+                        <Link to={`/services/${service._id}`}>
+                            <button className='register-logout-button rounded'>View</button>
                         </Link>
                     </div>
                 </div>
