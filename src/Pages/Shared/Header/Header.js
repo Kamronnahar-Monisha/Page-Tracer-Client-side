@@ -38,6 +38,17 @@ const Header = ({ children }) => {
                             <li className="nav-item ms-3">
                                 <Link className="nav-link fw-bold text-white" to="/blog">Blog</Link>
                             </li>
+                            {
+                                user &&
+                                <>
+                                    <li className="nav-item ms-3">
+                                        <Link className="nav-link fw-bold text-white" to="/my-review">My Review</Link>
+                                    </li>
+                                    <li className="nav-item ms-3">
+                                        <Link className="nav-link fw-bold text-white" to="/add-service">Add Service</Link>
+                                    </li>
+                                </>
+                            }
                             <li className="nav-item ms-3">
                                 {
                                     user ?
