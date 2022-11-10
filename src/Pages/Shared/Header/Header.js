@@ -30,22 +30,22 @@ const Header = ({ children }) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-lg-0">
                             <li className="nav-item ms-3">
-                                <Link className="nav-link fw-bold text-white" to="/home">Home</Link>
+                                <Link className="nav-link  text-white" to="/home">Home</Link>
                             </li>
                             <li className="nav-item ms-3">
-                                <Link className="nav-link fw-bold text-white" to="/services">Services</Link>
+                                <Link className="nav-link  text-white" to="/services">Services</Link>
                             </li>
                             <li className="nav-item ms-3">
-                                <Link className="nav-link fw-bold text-white" to="/blog">Blog</Link>
+                                <Link className="nav-link  text-white" to="/blog">Blog</Link>
                             </li>
                             {
                                 user &&
                                 <>
                                     <li className="nav-item ms-3">
-                                        <Link className="nav-link fw-bold text-white" to="/my-review">My Review</Link>
+                                        <Link className="nav-link  text-white" to="/my-review">My Review</Link>
                                     </li>
                                     <li className="nav-item ms-3">
-                                        <Link className="nav-link fw-bold text-white" to="/add-service">Add Service</Link>
+                                        <Link className="nav-link  text-white" to="/add-service">Add Service</Link>
                                     </li>
                                 </>
                             }

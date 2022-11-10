@@ -6,6 +6,7 @@ import Footer from '../../Shared/Footer/Footer';
 import Showcase from '../Showcase/Showcase';
 import LimitedService from '../LimitedService/LimitedService';
 import Contact from '../Contact/Contact';
+import AboutUs from '../../AboutUs/AboutUs';
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
             </div>
             <LimitedService></LimitedService>
             <Contact></Contact>
+            <AboutUs></AboutUs>
             <Footer></Footer>
         </div>
     );
