@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
+import { PhotoView } from 'react-photo-view';
 import aboutUsImg from '../../images/aboutUs.jpg'
 
 const AboutUs = () => {
@@ -7,7 +8,9 @@ const AboutUs = () => {
         <div className='container about'>
             <div className="row justify-content-center align-items-center">
                 <div className="col-lg-4">
-                    <img src={aboutUsImg} alt="" className='w-100 about-img' />
+                    <PhotoView src={aboutUsImg}>
+                        <img src={aboutUsImg} alt="" className='w-100 about-img' />
+                    </PhotoView>
                     <div className='mt-3 pt-2'>
                         <h4 className='theme-color-gray text-center'>Let's Talk About Our Beautiful Bookmarks</h4>
                         <hr className='custom-hr mt-2 mb-4' />

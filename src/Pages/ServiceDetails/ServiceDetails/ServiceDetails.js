@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import { HiChatBubbleLeftEllipsis} from "react-icons/hi2";
+import { HiChatBubbleLeftEllipsis } from "react-icons/hi2";
 import { Link, useLoaderData } from 'react-router-dom';
+import { PhotoView } from 'react-photo-view';
 import Review from '../Review/Review';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const service = useLoaderData();
-    const[reviews,setReviews] = useState([]);
-   
-    useEffect(()=>{
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
         fetch(`http://localhost:5000/orders?serviceId=${service._id}`)
-        .then(res=>res.json())
-        .then(data=>setReviews(data));
-    },[service._id]);
+            .then(res => res.json())
+            .then(data => setReviews(data));
+    }, [service._id]);
 
     return (
         <div>
@@ -21,7 +22,9 @@ const ServiceDetails = () => {
                 <div className="row justify-content-around">
                     <div className='col-lg-5'>
                         <div className='rounded shadow-lg mx-2'>
-                            <img src={service.img} alt="bookmark" className='w-100 rounded-top service-details-img' />
+                            <PhotoView src={service.img}>
+                                <img src={service.img} alt="bookmark" className='w-100 rounded-top service-details-img' />
+                            </PhotoView>
                             <div className='p-4'>
                                 <p className='theme-color-turquoise fs-5 mb-0'>{service.name}</p>
                                 <div className="row justify-content-between">
@@ -51,7 +54,7 @@ const ServiceDetails = () => {
                         </Link>
                         <div>
                             {
-                                reviews.map(review=><Review key={review._id} review={review}></Review>)
+                                reviews.map(review => <Review key={review._id} review={review}></Review>)
                             }
                         </div>
                     </div>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HiChatBubbleLeftEllipsis} from "react-icons/hi2";
+import { HiChatBubbleLeftEllipsis } from "react-icons/hi2";
+import { PhotoView } from 'react-photo-view';
 import './MyReviewCard.css';
 
-const MyReviewCard = ({ review,handleDeleteButton }) => {
+const MyReviewCard = ({ review, handleDeleteButton }) => {
     const [service, setService] = useState({});
 
     useEffect(() => {
@@ -15,7 +16,9 @@ const MyReviewCard = ({ review,handleDeleteButton }) => {
         <div className='shadow p-3 rounded w-50 mx-auto my-5'>
             <div className="row">
                 <div className="col-lg-3">
-                    <img src={service?.img} className="w-100 rounded" alt="" />
+                    <PhotoView src={service?.img}>
+                        <img src={service?.img} className="w-100 rounded" alt="" />
+                    </PhotoView>
                 </div>
                 <div className="col-lg-8">
                     <h4 className='theme-color-turquoise'>{service?.name}</h4>
@@ -33,7 +36,7 @@ const MyReviewCard = ({ review,handleDeleteButton }) => {
                             <Link to={`/edit-review/${review._id}`}>
                                 <button className='review-edit-btn rounded'>Edit</button>
                             </Link>
-                            <button onClick={()=>handleDeleteButton(review._id)} className='review-delete-btn rounded ms-2'>Delete</button>
+                            <button onClick={() => handleDeleteButton(review._id)} className='review-delete-btn rounded ms-2'>Delete</button>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,16 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { PhotoView } from 'react-photo-view';
 import './Service.css';
 
 const Service = ({ service }) => {
     return (
         <div className='col-lg-4'>
             <div className='rounded shadow-lg mx-2'>
-                <img src={service.img} alt="bookmark" className='w-100 rounded-top' />
+                <PhotoView src={service.img}>
+                    <img src={service.img} alt="bookmark" className='w-100 rounded-top' />
+                </PhotoView>
                 <div className='p-4'>
                     <p className='theme-color-turquoise fs-5 mb-0'>{service.name}</p>
                     <div className="row justify-content-between">
