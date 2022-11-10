@@ -1,10 +1,14 @@
 import React from 'react';
 import './Blog.css';
 import blogImg from '../../images/blog.gif';
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
     return (
         <div className='blog '>
+            <Helmet>
+                <title>Blog Page</title>
+            </Helmet>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7">

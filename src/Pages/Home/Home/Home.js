@@ -7,6 +7,7 @@ import Showcase from '../Showcase/Showcase';
 import LimitedService from '../LimitedService/LimitedService';
 import Contact from '../Contact/Contact';
 import AboutUs from '../../AboutUs/AboutUs';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 
@@ -14,11 +15,14 @@ const Home = () => {
         backgroundImage: `url(${showcaseBg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        paddingBottom:'50px'
+        paddingBottom: '50px'
     }
 
     return (
         <div>
+            <Helmet>
+                <title>Page Tracer - Home</title>
+            </Helmet>
             <div style={homeBg} className='mb-5'>
                 <div className="container">
                     <Header></Header>

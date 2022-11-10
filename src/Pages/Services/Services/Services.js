@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import Service from '../../Shared/Service/Service';
 import './Services.css';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
     const [services,setServices] = useState([]);
@@ -10,9 +10,11 @@ const Services = () => {
         .then(res=>res.json())
         .then(data=>setServices(data));
     },[])
-    console.log(services);
     return (
         <div className='container mb-5 py-5'>
+             <Helmet>
+                <title>Bookmarks</title>
+            </Helmet>
             <h3 className='theme-color-gray text-center'>Choose Your Desirable Bookmarks</h3>
             <hr className='custom-hr mt-2' />
             <div className="row my-5 g-5">

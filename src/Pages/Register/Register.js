@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
 import registerImg from '../../images/register.gif';
 import { AuthContext } from '../../Context/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const [errorMassage, setErrorMassage] = useState({});
@@ -55,6 +56,9 @@ const Register = () => {
 
     return (
         <div className='container py-5'>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <div className="row justify-content-around align-items-center pb-5 pt-4">
                 <div className="col-lg-5">
                     <img src={registerImg} alt="A girl log in a website" className='w-100' />

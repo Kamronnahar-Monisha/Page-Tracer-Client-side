@@ -4,6 +4,7 @@ import loginImg from '../../images/login.gif';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const [message, setMessage] = useState(null);
@@ -45,6 +46,9 @@ const Login = () => {
 
     return (
         <div className='container py-5'>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div className="row justify-content-around align-items-center pb-5 pt-4">
                 <div className="col-lg-5">
                     <img src={loginImg} alt="A girl log in a website" className='w-100' />

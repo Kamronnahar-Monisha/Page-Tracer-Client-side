@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddService.css';
+import { Helmet } from 'react-helmet-async';
 
 const AddService = () => {
     const navigate = useNavigate();
@@ -38,6 +39,9 @@ const AddService = () => {
 
     return (
         <div className='container my-5'>
+            <Helmet>
+                <title>Add New Service</title>
+            </Helmet>
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <div className='theme-color-shadow rounded p-5'>

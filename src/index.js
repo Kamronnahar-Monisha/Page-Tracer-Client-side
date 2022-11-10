@@ -7,15 +7,18 @@ import AuthProvider from './Context/AuthProvider';
 import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider } from 'react-photo-view';
 import 'react-toastify/dist/ReactToastify.css';
+import { HelmetProvider } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PhotoProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </PhotoProvider>
+    <HelmetProvider>
+      <PhotoProvider>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </PhotoProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );
 

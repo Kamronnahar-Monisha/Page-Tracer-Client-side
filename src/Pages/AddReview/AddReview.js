@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import './AddReview.css';
 import reviewImg from '../../images/reviewImg.gif';
+import { Helmet } from 'react-helmet-async';
 
 const AddReview = () => {
     const { user } = useContext(AuthContext);
@@ -44,6 +45,9 @@ const AddReview = () => {
 
     return (
         <div className='container my-5'>
+            <Helmet>
+                <title>Add A Review</title>
+            </Helmet>
             <div className="row justify-content-around align-items-center">
                 <div className="col-lg-5">
                     <img src={reviewImg} alt="" className='w-100' />

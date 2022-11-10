@@ -3,6 +3,7 @@ import { AuthContext } from '../../../Context/AuthProvider';
 import MyReviewCard from '../MyReviewCard/MyReviewCard';
 import './MyReview.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 
 const MyReview = () => {
@@ -44,6 +45,9 @@ const MyReview = () => {
 
     return (
         <>
+            <Helmet>
+                <title>My Review</title>
+            </Helmet>
             {
                 myReviews.length ?
                     <div className='my-5'>

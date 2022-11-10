@@ -5,6 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoView } from 'react-photo-view';
 import Review from '../Review/Review';
 import './ServiceDetails.css';
+import { Helmet } from 'react-helmet-async';
 
 const ServiceDetails = () => {
     const service = useLoaderData();
@@ -18,6 +19,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>{service.name}</title>
+            </Helmet>
             <div className="container my-5">
                 <div className="row justify-content-around">
                     <div className='col-lg-5'>

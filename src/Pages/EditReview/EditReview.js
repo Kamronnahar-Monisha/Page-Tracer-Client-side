@@ -2,6 +2,7 @@ import React from 'react';
 import './EditReview.css';
 import reviewEditImg from '../../images/edit-review.gif';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const EditReview = () => {
     const review = useLoaderData();
@@ -32,6 +33,9 @@ const EditReview = () => {
 
     return (
         <div className='container my-5'>
+            <Helmet>
+                <title>Edit Your Review</title>
+            </Helmet>
             <div className="row justify-content-around align-items-center">
                 <div className="col-lg-5">
                     <img src={reviewEditImg} alt="" className='w-100' />
