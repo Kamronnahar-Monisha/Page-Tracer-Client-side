@@ -11,7 +11,7 @@ const Contact = () => {
                 <div className="col-lg-4">
                     <img src={discountImg} className="w-100" alt="" />
                 </div>
-                <div className="col-lg-4 text-center">
+                <div className="col-lg-4 text-center text-lg-start">
                     <h2 className='theme-color-turquoise'>Get Discount Information</h2>
                     <input className='form-control text-muted contact-email' type="text" defaultValue={user ? user.email : ""} />
                     <br />
