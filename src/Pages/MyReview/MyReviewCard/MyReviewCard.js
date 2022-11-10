@@ -8,7 +8,7 @@ const MyReviewCard = ({ review, handleDeleteButton }) => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${review.serviceId}`)
+        fetch(`https://page-tracer-server-site.vercel.app/services/${review.serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [review.serviceId])

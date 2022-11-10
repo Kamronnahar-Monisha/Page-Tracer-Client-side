@@ -13,7 +13,7 @@ const EditReview = () => {
         const form = event.target;
         const editedReview = form.editedReview.value;
 
-        fetch(`http://localhost:5000/orders/${review._id}`, {
+        fetch(`https://page-tracer-server-site.vercel.app/orders/${review._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'

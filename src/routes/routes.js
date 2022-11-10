@@ -42,14 +42,14 @@ export const router = createBrowserRouter([
                 path: "/services/:id",
                 element:<ServiceDetails></ServiceDetails>,
                 loader:async({params})=>{
-                    return fetch(`http://localhost:5000/services/${params.id}`);
+                    return fetch(`https://page-tracer-server-site.vercel.app/services/${params.id}`);
                 }
             },
             {
                 path: "/review/:id",
                 element:<PrivateRoute><AddReview></AddReview></PrivateRoute>,
                 loader:async({params})=>{
-                    return fetch(`http://localhost:5000/services/${params.id}`);
+                    return fetch(`https://page-tracer-server-site.vercel.app/services/${params.id}`);
                 }
             },
             {
@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
                 path: "/edit-review/:id",
                 element:<PrivateRoute><EditReview></EditReview></PrivateRoute>,
                 loader:async({params})=>{
-                    return fetch(`http://localhost:5000/orders/${params.id}`);
+                    return fetch(`https://page-tracer-server-site.vercel.app/orders/${params.id}`);
                 }
             },
             {

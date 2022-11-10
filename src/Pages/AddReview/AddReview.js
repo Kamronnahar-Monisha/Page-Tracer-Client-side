@@ -27,7 +27,7 @@ const AddReview = () => {
             serviceId: service._id
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://page-tracer-server-site.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

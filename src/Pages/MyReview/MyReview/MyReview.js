@@ -15,7 +15,7 @@ const MyReview = () => {
         if (!proceed) {
             return;
         }
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://page-tracer-server-site.vercel.app/orders/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -38,7 +38,7 @@ const MyReview = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?userEmail=${user.email}`)
+        fetch(`https://page-tracer-server-site.vercel.app/orders?userEmail=${user.email}`)
             .then(res => res.json())
             .then(data => setMyReviews(data));
     }, [user.email])
