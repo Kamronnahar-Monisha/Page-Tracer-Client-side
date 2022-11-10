@@ -5,6 +5,7 @@ import showcaseBg from '../../../images/home-showcase-bg.svg';
 import Footer from '../../Shared/Footer/Footer';
 import Showcase from '../Showcase/Showcase';
 import LimitedService from '../LimitedService/LimitedService';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
                 </div>
             </div>
             <LimitedService></LimitedService>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
